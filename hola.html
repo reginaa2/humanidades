@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tus datos se enviaron exitosamente!!</h1>  
+    <p>Bienvenido/a, <span id="nombreMostrado"></span> pronto nos pondremos en contacto a través del correo <span id="emailMostrado"> !!</span>
+  
+    <script>
+       
+        var urlParams = new URLSearchParams(window.location.search);
+        
+        
+        var nombre = urlParams.get('nombre');
+        var correo = urlParams.get('email');
+               
+       
+        document.getElementById('nombreMostrado').textContent = nombre;
+        document.getElementById('emailMostrado').textContent = correo;
+    </script>
+
+</body>
+</html>
